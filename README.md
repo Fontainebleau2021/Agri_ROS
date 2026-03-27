@@ -174,27 +174,7 @@ roslaunch check_data lidar_convert_xyzi.launch
 
 ---
 
-## 5. 编译方式
-
-```bash
-cd ~/your_workspace
-catkin_make
-source devel/setup.bash
-```
-
----
-
-## 6. 快速使用示例
-
-运行数据检查工具：
-
-```bash
-roslaunch check_data check_data.launch
-```
-
----
-
-## 7. 设计原则
+## 5. 设计原则
 
 本仓库遵循以下设计原则：
 
@@ -206,16 +186,7 @@ roslaunch check_data check_data.launch
 
 ---
 
-## 8. 后续发展方向
-
-* 基于可观测性的自适应定位与 SLAM
-* LIO 框架增强（结合 CT-ICP / 因子图方法）
-* 稳定结构地图（Stable Map）作为先验约束
-* AI 感知与定位系统深度融合
-
----
-
-## 9. 说明
+## 6. 说明
 
 * 各模块可独立扩展，新增功能需遵循目录结构规范
 * 外部依赖建议通过脚本或文档统一管理
