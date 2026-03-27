@@ -1,0 +1,250 @@
+
+<script lang="ts">
+    import {get_object} from "../../process_json.ts";
+    import ParamTable from "$lib/components/ParamTable.svelte";
+    import ShortcutTable from "$lib/components/ShortcutTable.svelte";
+    import DemosSection from "$lib/components/DemosSection.svelte";
+    import FunctionsSection from "$lib/components/FunctionsSection.svelte";
+    import GuidesSection from "$lib/components/GuidesSection.svelte";
+    import CopyButton from "$lib/components/CopyButton.svelte";
+    import { style_formatted_text } from "$lib/text";
+
+
+    let obj = get_object("chatbot");
+    let chatmessage_obj = get_object("chatmessage");
+    let chatmessage_optiondict = get_object("optiondict");
+    let chatmessage_metadatadict = get_object("metadatadict");
+
+
+    chatmessage_optiondict.parameters = [
+        {
+            "name": "value",
+            "annotation": "str",
+            "doc": "The value to return when the option is selected."
+        },
+        {
+            "name": "label",
+            "annotation": "str",
+            "doc": "The text to display in the option, if different from the value."
+        }
+    ]
+
+    chatmessage_metadatadict.parameters = [
+        {
+            "name": "title",
+            "annotation": "str",
+            "doc": "The title of the 'thought' message. Only required field."
+        },
+        {
+            "name": "id",
+            "annotation": "int | str",
+            "doc": "The ID of the message. Only used for nested thoughts. Nested thoughts can be nested by setting the parent_id to the id of the parent thought."
+        },
+        {
+            "name": "parent_id",
+            "annotation": "int | str",
+            "doc": "The ID of the parent message. Only used for nested thoughts."
+        },
+        {
+            "name": "log",
+            "annotation": "str",
+            "doc": "A string message to display next to the thought title in a subdued font."
+        },
+        {
+            "name": "duration",
+            "annotation": "float",
+            "doc": "The duration of the message in seconds. Appears next to the thought title in a subdued font inside a parentheses."
+        },
+        {
+            "name": "status",
+            "annotation": "Literal['pending', 'done']",
+            "doc": "if set to `'pending'`, a spinner appears next to the thought title and the accordion is initialized open.  If `status` is `'done'`, the thought accordion is initialized closed. If `status` is not provided, the thought accordion is initialized open and no spinner is displayed."
+        }
+    ]
+
+
+    let embedded_demo_obj = `[
+        {"role": "user", "content": "Hello World"},
+        {"role": "assistant", "content": "Hey Gradio!"},
+        {"role": "user", "content": "❤️"},
+        {"role": "assistant", "content": "😍"}
+    ]`
+</script>
+
+<!--- Title -->
+# {obj.name}
+
+<!--- Usage -->
+```python
+gradio.Chatbot(type="messages", ···)
+```
+
+
+<!--- Description -->
+### Description
+## {@html style_formatted_text(obj.description)}
+
+<!-- Behavior -->
+### Behavior
+
+The data format accepted by the Chatbot is dictated by the `type` parameter.
+This parameter can take two values, `'tuples'` and `'messages'`. 
+The `'tuples'` type is deprecated and will be removed in a future version of Gradio.
+
+### Message format
+
+If the `type` is `'messages'`, then the data sent to/from the chatbot will be a list of dictionaries
+with `role` and `content` keys. This format is compliant with the format expected by most LLM APIs (HuggingChat, OpenAI, Claude).
+The `role` key is either `'user'` or `'assistant'` and the `content` key can be one of the following should be a  string (rendered as markdown/html) or a Gradio component (useful for displaying files).
+
+As an example:
+
+```python
+import gradio as gr
+
+history = [
+    {"role": "assistant", "content": "I am happy to provide you that report and plot."},
+    {"role": "assistant", "content": gr.Plot(value=make_plot_from_file('quaterly_sales.txt'))}
+]
+
+with gr.Blocks() as demo:
+    gr.Chatbot(history, type="messages")
+
+demo.launch()
+```
+
+For convenience, you can use the `ChatMessage` dataclass so that your text editor can give you autocomplete hints and typechecks.
+
+```python
+import gradio as gr
+
+history = [
+    gr.ChatMessage(role="assistant", content="How can I help you?"),
+    gr.ChatMessage(role="user", content="Can you make me a plot of quarterly sales?"),
+    gr.ChatMessage(role="assistant", content="I am happy to provide you that report and plot.")
+]
+
+with gr.Blocks() as demo:
+    gr.Chatbot(history, type="messages")
+
+demo.launch()
+```
+
+
+<!--- Initialization -->
+### Initialization
+<ParamTable parameters={obj.parameters} anchor_links={obj.name}/>
+
+
+{#if obj.string_shortcuts && obj.string_shortcuts.length > 0}
+<!--- Shortcuts -->
+### Shortcuts
+<ShortcutTable shortcuts={obj.string_shortcuts} />
+{/if}
+
+### Examples
+
+** Displaying Thoughts/Tool Usage **
+
+When `type` is `messages`, you can provide additional metadata regarding any tools used to generate the response.
+This is useful for displaying the thought process of LLM agents. For example,
+
+```python
+def generate_response(history):
+    history.append(
+        ChatMessage(role="assistant",
+                    content="The weather API says it is 20 degrees Celcius in New York.",
+                    metadata={"title": "🛠️ Used tool Weather API"})
+        )
+    return history
+```
+
+Would be displayed as following:
+
+<img src="https://github.com/user-attachments/assets/c1514bc9-bc29-4af1-8c3f-cd4a7c2b217f" alt="Gradio chatbot tool display">
+
+You can also specify metadata with a plain python dictionary,
+
+```python
+def generate_response(history):
+    history.append(
+        dict(role="assistant",
+             content="The weather API says it is 20 degrees Celcius in New York.",
+             metadata={"title": "🛠️ Used tool Weather API"})
+        )
+    return history
+```
+
+**Using Gradio Components Inside `gr.Chatbot`**
+
+The `Chatbot` component supports using many of the core Gradio components (such as `gr.Image`, `gr.Plot`, `gr.Audio`, and `gr.HTML`) inside of the chatbot. Simply include one of these components in your list of tuples. Here's an example:
+
+```py
+import gradio as gr
+
+def load():
+    return [
+        ("Here's an audio", gr.Audio("https://github.com/gradio-app/gradio/raw/main/gradio/media_assets/audio/audio_sample.wav")),
+        ("Here's an video", gr.Video("https://github.com/gradio-app/gradio/raw/main/gradio/media_assets/videos/world.mp4"))
+    ]
+
+with gr.Blocks() as demo:
+    chatbot = gr.Chatbot()
+    button = gr.Button("Load audio and video")
+    button.click(load, None, chatbot)
+
+demo.launch()
+```
+
+{#if obj.demos && obj.demos.length > 0}
+<!--- Demos -->
+### Demos 
+<DemosSection demos={obj.demos} />
+{/if}
+
+{#if obj.fns && obj.fns.length > 0}
+<!--- Event Listeners -->
+### Event Listeners 
+<FunctionsSection fns={obj.fns} event_listeners={true} />
+{/if}
+
+<!-- Helper Classes -->
+### Helper Classes 
+<div style="margin-left: 3rem">
+
+<!--- Title -->
+### ChatMessage
+
+
+<!--- Usage -->
+```python
+gradio.ChatMessage(···)
+```
+
+<!--- Description -->
+#### Description
+## {@html style_formatted_text(chatmessage_obj.description)}
+
+<ParamTable parameters={chatmessage_obj.parameters} anchor_links={chatmessage_obj.name} />
+
+<!--- Title -->
+### MetadataDict
+
+## {@html style_formatted_text(chatmessage_metadatadict.description)}
+
+<ParamTable parameters={chatmessage_metadatadict.parameters} header="Keys" anchor_links={chatmessage_metadatadict.name} />
+
+<!--- Title -->
+### OptionDict
+
+## {@html style_formatted_text(chatmessage_optiondict.description)}
+
+<ParamTable parameters={chatmessage_optiondict.parameters} header="Keys" anchor_links={chatmessage_optiondict.name} />
+
+</div>
+
+{#if obj.guides && obj.guides.length > 0}
+<!--- Guides -->
+### Guides
+<GuidesSection guides={obj.guides}/>
+{/if}

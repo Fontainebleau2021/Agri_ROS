@@ -1,0 +1,137 @@
+<script context="module">
+	let id = 0;
+</script>
+
+<script lang="ts">
+	import { tick } from "svelte";
+	let {
+		selected = $bindable(),
+		display_value,
+		internal_value,
+		disabled,
+		rtl,
+		on_input
+	} = $props();
+	let is_selected = $derived(selected === internal_value);
+
+	async function handle_input(
+		e: Event & { target: EventTarget & HTMLInputElement }
+	): Promise<void> {
+		is_selected = e.target.checked;
+		if (is_selected) {
+			await tick();
+			on_input();
+		}
+	}
+</script>
+
+<label
+	class:disabled
+	class:selected={is_selected}
+	data-testid="{display_value}-radio-label"
+	class:rtl
+>
+	<input
+		{disabled}
+		type="radio"
+		name="radio-{++id}"
+		value={internal_value}
+		aria-checked={is_selected}
+		bind:group={selected}
+		on:input={handle_input}
+	/>
+	<span>{display_value}</span>
+</label>
+
+<style>
+	label {
+		display: flex;
+		align-items: center;
+		transition: var(--button-transition);
+		cursor: pointer;
+		box-shadow: var(--checkbox-label-shadow);
+		border: var(--checkbox-label-border-width) solid
+			var(--checkbox-label-border-color);
+		border-radius: var(--checkbox-border-radius);
+		background: var(--checkbox-label-background-fill);
+		padding: var(--checkbox-label-padding);
+		color: var(--checkbox-label-text-color);
+		font-weight: var(--checkbox-label-text-weight);
+		font-size: var(--checkbox-label-text-size);
+		line-height: var(--line-md);
+	}
+
+	label:hover {
+		background: var(--checkbox-label-background-fill-hover);
+	}
+	label:focus {
+		background: var(--checkbox-label-background-fill-focus);
+	}
+
+	label.selected {
+		background: var(--checkbox-label-background-fill-selected);
+		color: var(--checkbox-label-text-color-selected);
+		border-color: var(--checkbox-label-border-color-selected);
+	}
+
+	label > * + * {
+		margin-left: var(--size-2);
+	}
+
+	label.rtl > * + * {
+		margin-left: 0;
+		margin-right: var(--size-2);
+	}
+
+	input {
+		--ring-color: transparent;
+		position: relative;
+		box-shadow: var(--checkbox-shadow);
+		border: var(--checkbox-border-width) solid var(--checkbox-border-color);
+		border-radius: var(--radius-full);
+		background-color: var(--checkbox-background-color);
+		line-height: var(--line-sm);
+	}
+
+	input:checked,
+	input:checked:hover {
+		border-color: var(--checkbox-border-color-selected);
+		background-image: var(--radio-circle);
+		background-color: var(--checkbox-background-color-selected);
+	}
+
+	input:checked::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		background-color: white;
+	}
+
+	input:hover:not([disabled]) {
+		border-color: var(--checkbox-border-color-hover);
+		background-color: var(--checkbox-background-color-hover);
+	}
+
+	input:focus:not([disabled]) {
+		border-color: var(--checkbox-border-color-focus);
+		background-color: var(--checkbox-background-color-focus);
+	}
+
+	input:checked:focus:not([disabled]) {
+		border-color: var(--checkbox-border-color-focus);
+		background-image: var(--radio-circle);
+		background-color: var(--checkbox-background-color-selected);
+	}
+
+	input[disabled],
+	.disabled {
+		cursor: not-allowed;
+	}
+
+	input[disabled] {
+		opacity: 0.75;
+	}
+</style>

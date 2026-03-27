@@ -1,0 +1,159 @@
+
+<script lang="ts">
+    import {get_object} from "../../process_json.ts";
+    import ParamTable from "$lib/components/ParamTable.svelte";
+    import ShortcutTable from "$lib/components/ShortcutTable.svelte";
+    import DemosSection from "$lib/components/DemosSection.svelte";
+    import FunctionsSection from "$lib/components/FunctionsSection.svelte";
+    import GuidesSection from "$lib/components/GuidesSection.svelte";
+    import CopyButton from "$lib/components/CopyButton.svelte";
+    import { style_formatted_text } from "$lib/text";
+
+
+    let obj = get_object("imageeditor");
+    let brush_obj = get_object("brush");
+    let eraser_obj = get_object("eraser");
+    let layeroptions_obj = get_object("layeroptions");
+    let webcam_options_obj = get_object("webcamoptions")
+</script>
+
+<!--- Title -->
+# {obj.name}
+
+<!--- Usage -->
+```python
+gradio.ImageEditor(···)
+```
+
+
+
+<!--- Description -->
+### Description
+## {@html style_formatted_text(obj.description)}
+
+<!-- Behavior -->
+### Behavior
+## **As input component**: {@html style_formatted_text(obj.preprocess.return_doc.doc)}
+##### Your function should accept one of these types:
+
+```python
+def predict(
+	value: EditorValue | None
+)
+	...
+```
+
+<br>
+
+## **As output component**: {@html style_formatted_text(obj.postprocess.parameter_doc[0].doc)}
+##### Your function should return one of these types:
+
+```python
+def predict(···) -> EditorValue | ImageType | None
+	...	
+	return value
+```
+
+
+<!--- Initialization -->
+### Initialization
+<ParamTable parameters={obj.parameters} anchor_links={obj.name}/>
+
+
+{#if obj.string_shortcuts && obj.string_shortcuts.length > 0}
+<!--- Shortcuts -->
+### Shortcuts
+<ShortcutTable shortcuts={obj.string_shortcuts} />
+{/if}
+
+{#if obj.demos && obj.demos.length > 0}
+<!--- Demos -->
+### Demos 
+<DemosSection demos={obj.demos} />
+{/if}
+
+{#if obj.fns && obj.fns.length > 0}
+<!--- Event Listeners -->
+### Event Listeners 
+<FunctionsSection fns={obj.fns} event_listeners={true} />
+{/if}
+
+<!-- Helper Classes -->
+### Helper Classes 
+<div style="margin-left: 3rem">
+
+<!-- BRUSH -->
+<!--- Title -->
+### Brush
+
+<!--- Usage -->
+```python
+gradio.Brush(···)
+```
+
+<!--- Description -->
+#### Description
+## {@html style_formatted_text(brush_obj.description)}
+
+<!--- Initialization -->
+#### Initialization
+<ParamTable parameters={brush_obj.parameters} anchor_links={brush_obj.name} />
+
+<!-- ERASER -->
+<!--- Title -->
+### Eraser
+
+<!--- Usage -->
+```python
+gradio.Eraser(···)
+```
+
+<!--- Description -->
+#### Description
+## {@html style_formatted_text(eraser_obj.description)}
+
+<!--- Initialization -->
+#### Initialization
+<ParamTable parameters={eraser_obj.parameters} anchor_links={eraser_obj.name}/>
+
+<!-- LAYER OPTIONS -->
+<!--- Title -->
+### Layer Options
+
+<!--- Usage -->
+```python
+gradio.LayerOptions(···)
+```
+
+<!--- Description -->
+#### Description
+## {@html style_formatted_text(layeroptions_obj.description)}
+
+<!--- Initialization -->
+#### Initialization
+<ParamTable parameters={layeroptions_obj.parameters} anchor_links={layeroptions_obj.name}/>
+
+<!-- WEBCAM OPTIONS -->
+<!--- Title -->
+### Webcam Options
+
+<!--- Usage -->
+```python
+gradio.WebcamOptions(···)
+```
+
+<!--- Description -->
+#### Description
+## {@html style_formatted_text(webcam_options_obj.description)}
+
+<!--- Initialization -->
+#### Initialization
+<ParamTable parameters={webcam_options_obj.parameters} anchor_links={webcam_options_obj.name}/>
+
+</div>
+
+{#if obj.guides && obj.guides.length > 0}
+<!--- Guides -->
+### Guides
+<GuidesSection guides={obj.guides}/>
+{/if}

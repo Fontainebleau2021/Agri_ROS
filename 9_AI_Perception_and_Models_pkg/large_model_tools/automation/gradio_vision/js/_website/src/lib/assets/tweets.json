@@ -1,0 +1,65 @@
+[
+	{
+		"name": "Anastasios Nikolas Angelopoulos",
+		"handle": "ml_angelopoulos",
+		"link": "https://twitter.com/ml_angelopoulos/status/1925288220360909286",
+		"content": "We love <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span>. <br><br>It helped us scale to our first million users. Amazing and undervalued that Gradio can do this.<br><br>cc <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@_akhaliq</span>",
+		"profile_pic": "4sbu_-Af_400x400.jpeg"
+	},
+	{
+		"name": "Jaydeep",
+		"handle": "_jaydeepkarale",
+		"link": "https://x.com/_jaydeepkarale/status/1639978163643252736",
+		"content": "Gradio was love at first sight..so easy to use",
+		"profile_pic": "NLkT5L7d_400x400.jpeg"
+	},
+	{
+		"name": "Will Rice",
+		"handle": "_Will_Rice",
+		"link": "https://twitter.com/_Will_Rice/status/1430258610131582979",
+		"content": "Just tried out <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span> and I am very impressed. Only took like 10mins to put together a <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">#tts</span> demo.",
+		"profile_pic": "LsCnjnsl_400x400.jpeg"
+	},
+	{
+		"name": "Art Litvinau",
+		"handle": "ArtLitvinau",
+		"link": "https://x.com/ArtLitvinau/status/1678937099343364097",
+		"content": "I love how easy is to build quick prototypes with <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span> ⚡️ this one took me 45 minutes with no previous experience with the library",
+		"profile_pic": "lpJQ2BrK_400x400.jpeg"
+	},
+	{
+		"name": "Shirochenko Dmitriy",
+		"handle": "dmshirochenko",
+		"link": "https://x.com/dmshirochenko/status/1924417517503627346",
+		"content": "Spent the weekend prototyping LLM interfaces directly in Python. <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@gradio</span>-app is a game changer for rapid UI development. Forget wrestling with JS/CSS; share your model in seconds. Thinking this unlocks serious iteration speed.",
+		"profile_pic": "ADswb5-b_400x400.jpeg"
+	},
+	{
+		"name": "iCode2",
+		"handle": "Ifeanyidiaye",
+		"link": "https://x.com/Ifeanyidiaye/status/1785948320596099111",
+		"content": "Apart from being very easy to use, one thing that I simply love about <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span> is its Javascript client, which makes it easy to build a nice HTML frontend for Python applications. This integration makes me rank gradio high in my list of favorite Python libraries.",
+		"profile_pic": "d6sTU6ul_400x400.jpeg"
+	},
+	{
+		"name": "Amar Saini",
+		"handle": "_Epoching_",
+		"link": "https://twitter.com/_Epoching_/status/1471091318482825219",
+		"content": "Just built a ️<span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span> app for a video related deep learning project. <br> I’m astonished by how simple it is to use & how elegant it looks! Lots and lots of great features & flexibility. Thanks for making this ❤ ",
+		"profile_pic": "pwMrDOBv_400x400.jpeg"
+	},
+	{
+		"name": "Roxana Daneshjou MD/PhD",
+		"handle": "RoxanaDaneshjou",
+		"link": "https://twitter.com/RoxanaDaneshjou/status/1418399829944721415",
+		"content": "Honestly, without <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span>, we would not be doing a real time AI trial.  We have many other ideas for algorithms we want to test through clinical trials, and we know it's possible thanks to <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">@Gradio</span>.",
+		"profile_pic": "ITFspAMm_x96.jpg"
+	},
+	{
+		"name": "Vinay Prabhu",
+		"handle": "vinayprabhu",
+		"link": "https://twitter.com/vinayprabhu/status/1324409497641652225",
+		"content": "Dear <span class=\"font-semibold\" style=\"color: rgb(29, 155, 240);\">#MachineLearning</span> twitter,<br>If you haven't typed: <br>$ pip install gradio<br>yet, now would be a damn good time.<br>Especially if you are working in computer vision &amp; deploying models in the real world. ",
+		"profile_pic": "1013607349943058433.jpg"
+	}
+]
