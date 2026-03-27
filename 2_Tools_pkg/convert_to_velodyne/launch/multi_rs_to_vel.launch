@@ -1,0 +1,48 @@
+<launch>
+    <!-- First Pair -->
+    <node name="rs_converter_1" pkg="rs_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/111/rslidar_points"/>
+        <param name="output_topic" value="/111/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="/111/velodyne"/>
+    </node>
+
+    <!-- Second Pair -->
+    <node name="rs_converter_2" pkg="rs_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/112/rslidar_points"/>
+        <param name="output_topic" value="/112/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="/112/velodyne"/>
+    </node>
+
+    <node name="rs_converter_3" pkg="rs_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/113/rslidar_points"/>
+        <param name="output_topic" value="/113/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="/113/velodyne"/>
+    </node>
+
+    <node name="rs_converter_4" pkg="rs_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/114/rslidar_points"/>
+        <param name="output_topic" value="/114/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="/114/velodyne"/>
+    </node>
+
+    <node name="rs_converter_5" pkg="rs_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/115/rslidar_points"/>
+        <param name="output_topic" value="/115/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="/115/velodyne"/>
+    </node>
+
+    <node name="rs_converter_6" pkg="rs_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/116/rslidar_points"/>
+        <param name="output_topic" value="/116/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="/116/velodyne"/>
+    </node>
+
+    <!-- Add more pairs as needed -->
+</launch>
+

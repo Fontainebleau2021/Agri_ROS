@@ -1,0 +1,36 @@
+<launch>
+	<arg name="use_sim_time" default="false" />
+	<arg name="use_zed" default="true" />
+	<arg name="use_bag" default="false" />
+
+	<!-- If use zed2 -->
+	<group if="$(arg use_zed)">
+		<!-- If use bag  -->
+		<group if="$(arg use_bag)">
+			<node pkg="rosbag" type="play" name="bag_data" args="--clock  /home/wushaoteng/project/electroMechanical/catkin_ws/data/0719-01.bag" />
+		</group>
+
+		<!-- If use original zed2 image and the image is spliced -->
+		<group unless="$(arg use_bag)">
+			<node pkg="aprilslam" type="zed_image_splitter" name="zed_image_splitter" />
+		</group>
+
+		<!-- rviz -->
+		<node name="rviz" pkg="rviz" type="rviz" args="-d $(find aprilslam)/config/apriltag_zed2.rviz" />
+	</group>
+
+	<!-- Apriltag ros detection -->
+	<include file="$(find apriltag_ros)/launch/continuous_detection.launch" />
+	<!-- Publish transform between tag frame and pointcloud map frame -->
+	<include file="$(find aprilslam)/launch/tf_publisher.launch" />
+
+	<!-- Mapper -->
+	<arg name="camera" default="/zed2_left" />
+	<arg name="use_tag_prior_info" default="true" />
+	<arg name="tag_prior_info_path" default="$(find aprilslam)/config/tag_prior_info_1112.yaml" />
+	<node pkg="aprilslam" type="mapper_node" name="mapper" output="screen" ns="$(arg camera)" respawn="true">
+		<param name="use_tag_prior_info" type="bool" value="$(arg use_tag_prior_info)" />
+		<param name="tag_prior_info_path" type="string" value="$(arg tag_prior_info_path)" />
+	</node>
+
+</launch>

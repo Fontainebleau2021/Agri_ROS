@@ -1,0 +1,9 @@
+<launch>
+    <!-- 加载参数到全局命名空间 -->
+  <param name="lidar_topic" value="/ouster/points"/>
+  <param name="lidar_clean_topic" value="/ouster/points_clean"/>
+  <param name="debug_info" value="false"/>
+
+  <node pkg="check_data" type="lidar_clean_node" name="lidar_clean" output="screen">
+  </node>
+</launch>

@@ -1,0 +1,209 @@
+tags:
+ -
+   id : 0
+   translation: [0, 0, 0]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 1
+   translation: [0, 0, 0]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 57
+   translation: [0, 0, -4]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 59
+   translation: [0, 0, -4]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 71
+   translation: [0, 0, -8]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 73
+   translation: [0, 0, -8]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 75
+   translation: [0, 0, -12]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 77
+   translation: [0, 0, -12]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 91
+   translation: [0, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 93
+   translation: [0, 0, -16]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 99
+   translation: [0, 0, -20]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 100
+   translation: [0, 0, -20]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 102
+   translation: [0, 0, -24]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 104
+   translation: [0, 0, -24]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 110
+   translation: [0, 0, -28]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 112
+   translation: [0, 0, -28]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 118
+   translation: [0, 0, -32]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 120
+   translation: [0, 0, -32]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 126
+   translation: [0, 0, -36]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 128
+   translation: [0, 0, -36]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 138
+   translation: [0, 0, -40]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 140
+   translation: [0, 0, -40]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 142
+   translation: [0, 0, -44]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 144
+   translation: [0, 0, -44]
+   rotation: [0, 1, 0, 0]
+
+
+ -
+   id : 10
+   translation: [12, 0, 0]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 12
+   translation: [12, 0, 0]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 61
+   translation: [12, 0, -4]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 63
+   translation: [12, 0, -4]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 67
+   translation: [12, 0, -8]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 69
+   translation: [12, 0, -8]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 79
+   translation: [12, 0, -12]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 81
+   translation: [12, 0, -12]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 19
+   translation: [12, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 89
+   translation: [12, 0, -16]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 95
+   translation: [12, 0, -20]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 97
+   translation: [12, 0, -20]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 106
+   translation: [12, 0, -24]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 108
+   translation: [12, 0, -24]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 114
+   translation: [12, 0, -28]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 116
+   translation: [12, 0, -28]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 122
+   translation: [12, 0, -32]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 124
+   translation: [12, 0, -32]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 187
+   translation: [6, 0.55, -48]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 189
+   translation: [6, 0, -48]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 124
+   translation: [12, 0, -32]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 130
+   translation: [12, 0, -36]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 132
+   translation: [12, 0, -36]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 134
+   translation: [12, 0, -40]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 136
+   translation: [12, 0, -40]
+   rotation: [0, 1, 0, 0]
+ -
+   id : 146
+   translation: [12, 0, -44]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 148
+   translation: [12, 0, -44]
+   rotation: [0, 1, 0, 0]
+
+

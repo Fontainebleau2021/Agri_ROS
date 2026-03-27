@@ -1,0 +1,8 @@
+IMU struct check result: 
+============================================
+imu_topic: /yesense/imu/data
+frame_id: imu_link
+freqency: 200
+orientation: 1
+angular_velocity: 1
+linear_acceleration: 1

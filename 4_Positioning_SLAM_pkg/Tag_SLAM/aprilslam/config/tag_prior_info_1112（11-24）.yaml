@@ -1,0 +1,118 @@
+tags:
+# -
+#   id : 77
+#   translation: [0, 0, 0]
+#   rotation: [0, 0, 0, 1]
+# -
+#   id : 61
+#   translation: [0.25, 0, -0.25]
+#   rotation: [0, 0.7071, 0, 0.7071]
+# -
+#   id : 19
+#   translation: [0, 0, -0.5]
+#   rotation: [0, -1, 0, 0]
+# -
+#   id : 63
+#   translation: [-0.25, 0, -0.25]
+#   rotation: [0, -0.7071, 0, 0.7071]
+
+ -
+   id : 183
+   translation: [0, 0, 0]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 181
+   translation: [0, 0, -0.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 91
+   translation: [0, 0, -4]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 108
+   translation: [0, 0, -4.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 12
+   translation: [0, 0, -8]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 93
+   translation: [0, 0, -8.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 10
+   translation: [0, 0, -12]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 169
+   translation: [0, 0, -12.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 89
+   translation: [2, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 95
+   translation: [4, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 100
+   translation: [6, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 99
+   translation: [8, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 97
+   translation: [10, 0, -16]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 116
+   translation: [12, 0, -12.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 104
+   translation: [12, 0, -12]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 118
+   translation: [12, 0, -8.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 120
+   translation: [12, 0, -8]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 114
+   translation: [12, 0, -4.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 102
+   translation: [12, 0, -4]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 193
+   translation: [12, 0, -0.09]
+   rotation: [0, -1, 0, 0]
+ -
+   id : 75
+   translation: [12, 0, 0]
+   rotation: [0, 0, 0, 1]
+ -
+   id : 159
+   translation: [0.06, -0.6, -8.05]
+   rotation: [0, 0.7071, 0, 0.7071]
+ -
+   id : 167
+   translation: [0.06, -0.6, -12.05]
+   rotation: [0, 0.7071, 0, 0.7071]
+ -
+   id : 173
+   translation: [11.94, -0.60, -12.05]
+   rotation: [0, -0.7071, 0, 0.7071]
+ -
+   id : 175
+   translation: [11.94, -0.6, -8.05]
+   rotation: [0, -0.7071, 0, 0.7071]

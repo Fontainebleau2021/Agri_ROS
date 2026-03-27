@@ -1,0 +1,15 @@
+Lidar struct check result: 
+============================================
+lidar_topic: /ouster/points
+frame_id: os_sensor
+freqency: 9.99884
+field: 
+  ambient       UINT16      offset=28    count=1
+  range         UINT32      offset=32    count=1
+  t             UINT32      offset=20    count=1
+  reflectivity  UINT16      offset=24    count=1
+  intensity     FLOAT32     offset=16    count=1
+  ring          UINT8       offset=26    count=1
+  z             FLOAT32     offset=8     count=1
+  y             FLOAT32     offset=4     count=1
+  x             FLOAT32     offset=0     count=1

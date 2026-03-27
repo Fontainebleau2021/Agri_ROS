@@ -1,0 +1,13 @@
+<launch>
+
+    <!-- First Pair -->
+    <node name="rs_to_velodyne" pkg="convert_to_velodyne" type="rs_to_velodyne" output="screen">
+        <param name="input_topic" value="/111/rslidar_points"/>
+        <param name="output_topic" value="/velodyne_points"/>
+        <param name="output_type" value="XYZIRT"/>
+        <param name="output_frame" value="velodyne"/>
+    </node>
+
+    <!-- Add more pairs as needed -->
+</launch>
+

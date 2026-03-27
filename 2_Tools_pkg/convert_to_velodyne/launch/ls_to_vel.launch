@@ -1,0 +1,8 @@
+<launch>
+    <!-- First Pair -->
+    <node name="ls_to_velodyne" pkg="convert_to_velodyne" type="ls_to_velodyne" output="screen">
+        <param name="lslidar_topic_" value="/c16/lslidar_point_cloud"/>
+        <param name="velodyne_topic" value="/velodyne_points"/>
+    </node>
+</launch>
+

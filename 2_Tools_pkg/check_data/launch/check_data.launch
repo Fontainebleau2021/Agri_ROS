@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="check_data" type="check_data_node" name="check_data" output="screen">
+    <rosparam command="load" file="$(find check_data)/config/config.yaml" />
+  </node>
+</launch>

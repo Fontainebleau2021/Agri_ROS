@@ -1,0 +1,62 @@
+/home/zhangwei/Documents/software/clion-2021.2.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/zhangwei/Documents/catkin_ws_0121_good/src/apriltag_ros/apriltag_ros
+-- Using CATKIN_DEVEL_PREFIX: /home/zhangwei/Documents/catkin_ws_0121_good/src/apriltag_ros/apriltag_ros/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/melodic
+-- This workspace overlays: /opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/zhangwei/Documents/catkin_ws_0121_good/src/apriltag_ros/apriltag_ros/cmake-build-debug/test_results
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+CMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:41 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:48 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.17") 
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.29
+-- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Could NOT find aprilslam (missing: aprilslam_DIR)
+-- Could not find the required component 'aprilslam'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
+CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+  Could not find a package configuration file provided by "aprilslam" with
+  any of the following names:
+
+    aprilslamConfig.cmake
+    aprilslam-config.cmake
+
+  Add the installation prefix of "aprilslam" to CMAKE_PREFIX_PATH or set
+  "aprilslam_DIR" to a directory containing one of the above files.  If
+  "aprilslam" provides a separate development package or SDK, be sure it has
+  been installed.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/zhangwei/Documents/catkin_ws_0121_good/src/apriltag_ros/apriltag_ros/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/zhangwei/Documents/catkin_ws_0121_good/src/apriltag_ros/apriltag_ros/cmake-build-debug/CMakeFiles/CMakeError.log".

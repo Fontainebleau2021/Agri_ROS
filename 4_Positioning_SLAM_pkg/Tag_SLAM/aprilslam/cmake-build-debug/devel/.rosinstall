@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/zhangwei/Documents/catkin_ws_0121_good/src/aprilslam/cmake-build-debug/devel/setup.sh

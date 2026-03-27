@@ -1,0 +1,118 @@
+standalone_tags:
+  [
+    {id: 0, size: 0.45},
+    {id: 1, size: 0.45},
+    {id: 10, size: 0.45},
+    {id: 12, size: 0.45},
+    {id: 57, size: 0.45},
+    {id: 59, size: 0.45},
+    {id: 61, size: 0.45},
+    {id: 63, size: 0.45},
+    {id: 71, size: 0.45},
+    {id: 73, size: 0.45},
+    {id: 67, size: 0.45},
+    {id: 69, size: 0.45},
+    {id: 75, size: 0.45},
+    {id: 77, size: 0.45},
+    {id: 79, size: 0.45},
+    {id: 81, size: 0.45},
+    {id: 91, size: 0.45},
+    {id: 93, size: 0.45},
+    {id: 19, size: 0.45},
+    {id: 89, size: 0.45},
+    {id: 95, size: 0.45},
+    {id: 97, size: 0.45},
+    {id: 99, size: 0.45},
+    {id: 100, size: 0.45},
+    {id: 102, size: 0.45},
+    {id: 104, size: 0.45},
+    {id: 106, size: 0.45},
+    {id: 108, size: 0.45},
+    {id: 110, size: 0.45},
+    {id: 112, size: 0.45},
+    {id: 114, size: 0.45},
+    {id: 116, size: 0.45},
+    {id: 118, size: 0.45},
+    {id: 120, size: 0.45},
+    {id: 122, size: 0.45},
+    {id: 124, size: 0.45},
+    {id: 187, size: 0.45},
+    {id: 189, size: 0.45},
+
+    {id: 126, size: 0.45},
+    {id: 128, size: 0.45},
+    {id: 138, size: 0.45},
+    {id: 140, size: 0.45},
+    {id: 142, size: 0.45},
+    {id: 144, size: 0.45},
+    {id: 148, size: 0.45},
+    {id: 146, size: 0.45},
+    {id: 136, size: 0.45},
+    {id: 134, size: 0.45},
+    {id: 132, size: 0.45},
+    {id: 130, size: 0.45},
+#
+##    small tag
+#    {id: 12, size: 0.2},
+#    {id: 13, size: 0.2},
+#    {id: 14, size: 0.2},
+#    {id: 15, size: 0.2},
+#    {id: 16, size: 0.2},
+#    {id: 17, size: 0.2},
+#    {id: 18, size: 0.2},
+#    {id: 19, size: 0.2},
+#    {id: 20, size: 0.2},
+#    {id: 21, size: 0.2},
+#    {id: 22, size: 0.2},
+#    {id: 23, size: 0.2},
+#    {id: 24, size: 0.2},
+#    {id: 25, size: 0.2},
+#    {id: 26, size: 0.2},
+#    {id: 27, size: 0.2},
+#    {id: 28, size: 0.2},
+#    {id: 29, size: 0.2},
+
+##   big tag
+#    {id: 30, size: 0.4},
+#    {id: 31, size: 0.4},
+#    {id: 32, size: 0.4},
+#    {id: 33, size: 0.4},
+#    {id: 34, size: 0.4},
+#    {id: 35, size: 0.4},
+#    {id: 36, size: 0.4},
+#    {id: 37, size: 0.4},
+#    {id: 38, size: 0.4},
+#    {id: 39, size: 0.4},
+#    {id: 40, size: 0.4},
+#    {id: 41, size: 0.4},
+#    {id: 42, size: 0.4},
+#    {id: 43, size: 0.4},
+#    {id: 44, size: 0.4},
+#    {id: 45, size: 0.4},
+#    {id: 46, size: 0.4},
+#    {id: 47, size: 0.4}
+  ]
+# ## Tag bundle definitions
+# ### Remarks
+#
+# - name is optional
+# - x, y, z have default values of 0 thus they are optional
+# - qw has default value of 1 and qx, qy, qz have default values of 0 thus they are optional
+#
+# ### Syntax
+#
+# tag_bundles:
+#   [
+#     {
+#       name: 'CUSTOM_BUNDLE_NAME',
+#       layout:
+#         [
+#           {id: ID, size: SIZE, x: X_POS, y: Y_POS, z: Z_POS, qw: QUAT_W_VAL, qx: QUAT_X_VAL, qy: QUAT_Y_VAL, qz: QUAT_Z_VAL},
+#           ...
+#         ]
+#     },
+#     ...
+#   ]
+tag_bundles:
+  [
+  ]

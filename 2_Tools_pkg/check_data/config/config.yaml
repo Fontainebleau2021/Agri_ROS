@@ -1,0 +1,7 @@
+lidar_topic:  "/ouster/points"
+imu_topic:  "/yesense/imu/data"
+
+#参数
+lidar_time_check: 0.5
+imu_time_check: 0.05
+gnss_time_check: 0.5

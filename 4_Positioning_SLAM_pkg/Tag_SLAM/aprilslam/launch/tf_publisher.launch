@@ -1,0 +1,23 @@
+<launch>
+<!--	<arg name="x" default="2.371109" />-->
+<!--	<arg name="y" default="1.6495965" />-->
+<!--	<arg name="z" default="0.3972004" />-->
+<!--	<arg name="yaw" default="-1.63126" />-->
+<!--	<arg name="pitch" default="-0.0187573" />-->
+<!--	<arg name="roll" default="1.54815" />-->
+
+	<arg name="x" default="2.3241336" />
+	<arg name="y" default="1.5723773" />
+	<arg name="z" default="0.3405351" />
+	<arg name="yaw" default="-1.62244 " />
+	<arg name="pitch" default="-0.057574 " />
+	<arg name="roll" default="1.55608" />
+
+	<arg name="frame_id" default="map" />
+	<arg name="child_frame_id" default="tag" />
+	<arg name="period_in_ms" default="10" />
+	<node pkg="tf" type="static_transform_publisher" name="tag_to_map" args="$(arg x) $(arg y) $(arg z) $(arg yaw) $(arg pitch) $(arg roll) $(arg frame_id) $(arg child_frame_id) $(arg period_in_ms)" />
+	<node pkg="aprilslam" type="tf_publisher" name="tf_publisher"/>
+    <node pkg="aprilslam" type="pcd_rviz_viewer" name="pcd_rviz_viewer"/>
+
+</launch>

@@ -1,0 +1,399 @@
+tags:
+#########right-front########
+  -
+    id : 116
+    translation: [0, 0, -3.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 118
+    translation: [0, 0, -7.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 114
+    translation: [0, 0, -11.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 193
+    translation: [0, 0, -15.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 156
+    translation: [0, 0, -19.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 187
+    translation: [0, 0, -23.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 53
+    translation: [0, 0, -27.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 21
+    translation: [0, 0, -31.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 27
+    translation: [0, 0, -35.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 31
+    translation: [0, 0, -39.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 80
+    translation: [0, 0, -43.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 135
+    translation: [0, 0, -47.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 138
+    translation: [0, 0, -51.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 130
+    translation: [0, 0, -55.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 136
+    translation: [0, 0, -59.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 164
+    translation: [0, 0, -63.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 14
+    translation: [0, 0, -67.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 157
+    translation: [0, 0, -71.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 110
+    translation: [0, 0, -75.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 142
+    translation: [0, 0, -79.91]
+    rotation: [0, 0, 0, 1]
+
+  #########right-back########
+  -
+    id : 104
+    translation: [0, 0, -4]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 120
+    translation: [0, 0, -8]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 102
+    translation: [0, 0, -12]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 75
+    translation: [0, 0, -16]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 59
+    translation: [0, 0, -20]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 161
+    translation: [0, 0, -24]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 199
+    translation: [0, 0, -28]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 23
+    translation: [0, 0, -32]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 195
+    translation: [0, 0, -36]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 25
+    translation: [0, 0, -40]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 52
+    translation: [0, 0, -44]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 165
+    translation: [0, 0, -48]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 146
+    translation: [0, 0, -52]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 140
+    translation: [0, 0, -56]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 134
+    translation: [0, 0, -60]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 85
+    translation: [0, 0, -64]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 0
+    translation: [0, 0, -68]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 72
+    translation: [0, 0, -72]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 9
+    translation: [0, 0, -76]
+    rotation: [0, -1, 0, 0]
+
+  #########left-front########
+  -
+    id : 169
+    translation: [12, 0, -3.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 93
+    translation: [12, 0, -7.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 108
+    translation: [12, 0, -11.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 181
+    translation: [12, 0, -15.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 122
+    translation: [12, 0, -19.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 56
+    translation: [12, 0, -23.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 197
+    translation: [12, 0, -27.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 191
+    translation: [12, 0, -31.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 166
+    translation: [12, 0, -35.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 43
+    translation: [12, 0, -39.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 121
+    translation: [12, 0, -43.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 131
+    translation: [12, 0, -47.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 143
+    translation: [12, 0, -51.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 112
+    translation: [12, 0, -55.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 106
+    translation: [12, 0, -59.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 115
+    translation: [12, 0, -63.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 128
+    translation: [12, 0, -67.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 124
+    translation: [12, 0, -71.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 126
+    translation: [12, 0, -75.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 117
+    translation: [12, 0, -79.91]
+    rotation: [0, 0, 0, 1]
+
+  #########left-back########
+  -
+    id : 10
+    translation: [12, 0, -4]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 12
+    translation: [12, 0, -8]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 91
+    translation: [12, 0, -12]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 183
+    translation: [12, 0, -16]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 179
+    translation: [12, 0, -20]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 44
+    translation: [12, 0, -24]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 185
+    translation: [12, 0, -28]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 162
+    translation: [12, 0, -32]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 18
+    translation: [12, 0, -36]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 171
+    translation: [12, 0, -40]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 109
+    translation: [12, 0, -44]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 163
+    translation: [12, 0, -48]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 153
+    translation: [12, 0, -52]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 132
+    translation: [12, 0, -56]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 7
+    translation: [12, 0, -60]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 105
+    translation: [12, 0, -64]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 82
+    translation: [12, 0, -68]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 46
+    translation: [12, 0, -72]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 40
+    translation: [12, 0, -76]
+    rotation: [0, -1, 0, 0]
+
+##########front end###########
+  -
+    id : 89
+    translation: [10, 0, 0]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 95
+    translation: [8, 0, 0]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 100
+    translation: [6, 0, 0]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 99
+    translation: [4, 0, 0]
+    rotation: [0, -1, 0, 0]
+  -
+    id : 97
+    translation: [2, 0, 0]
+    rotation: [0, -1, 0, 0]
+
+##########back end###########
+  -
+    id : 1
+    translation: [10, 0, -83.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 107
+    translation: [8, 0, -83.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 144
+    translation: [6, 0, -83.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 189
+    translation: [4, 0, -83.91]
+    rotation: [0, 0, 0, 1]
+  -
+    id : 148
+    translation: [2, 0, -83.91]
+    rotation: [0, 0, 0, 1]
+
+##########front end side#########
+  -
+    id : 159
+    translation: [11.88, -0.6, -7.95]
+    rotation: [0, -0.7071, 0, 0.7071]
+  -
+    id : 167
+    translation: [11.88, -0.6, -3.95]
+    rotation: [0, -0.7071, 0, 0.7071]
+  -
+    id : 173
+    translation: [0.06, -0.6, -3.95]
+    rotation: [0, 0.7071, 0, 0.7071]
+  -
+    id : 175
+    translation: [0.06, -0.6, -7.95]
+    rotation: [0, 0.7071, 0, 0.7071]
+##########back end side#########
+  -
+    id : 57
+    translation: [0.06, -0.6, -79.95]
+    rotation: [0, 0.7071, 0, 0.7071]
+  -
+    id : 113
+    translation: [0.06, -0.6, -75.95]
+    rotation: [0, 0.7071, 0, 0.7071]
+  -
+    id : 71
+    translation: [11.88, -0.6, -79.95]
+    rotation: [0, -0.7071, 0, 0.7071]
+  -
+    id : 73
+    translation: [11.88, -0.6, -75.95]
+    rotation: [0, -0.7071, 0, 0.7071]

@@ -1,0 +1,5 @@
+GNSS struct check result: 
+============================================
+gnss_topic: /fix
+frame_id: gps
+freqency: 9.99848
