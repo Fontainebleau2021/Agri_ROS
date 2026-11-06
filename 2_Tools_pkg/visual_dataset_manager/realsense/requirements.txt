@@ -1,0 +1,18 @@
+# ============================================================
+# RealSense 图像采集与标注工具 — 依赖清单
+# 安装命令：pip install -r requirements.txt
+#
+# 模拟模式（USE_MOCK=True）下无需安装 pyrealsense2，
+# 可使用 requirements_mock.txt 单独安装基础依赖。
+# ============================================================
+
+# GUI 框架
+PyQt5>=5.15.0
+
+# 图像处理
+opencv-python>=4.6.0
+numpy>=1.23.0
+
+# Intel RealSense SDK Python 绑定（真机模式 USE_MOCK=False 时必须）
+# 模拟模式下可注释掉此行，或改用 requirements_mock.txt
+pyrealsense2>=2.54.0

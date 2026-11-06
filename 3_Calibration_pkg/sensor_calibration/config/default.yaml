@@ -1,0 +1,51 @@
+# 自动标定工具默认参数（课程未指定第三方库时的「推荐方案」）
+# 环境：Ubuntu 22.04 + ROS2 Humble。详见 README「推荐方案」。
+
+ros:
+  version: ros2
+  setup_scripts:
+    - /opt/ros/humble/setup.bash
+    # 将第三方标定包与本仓库 multi_lidar_merge 放入同一工作空间编译后，取消下一行注释并改为你的路径：
+    # - /home/<你>/calib_ws/install/setup.bash
+  shell_prefix: ""
+
+camera:
+  squares_x: 8
+  squares_y: 6
+  square_size_m: 0.024
+  image_topic: /camera/image_raw
+  camera_ns: /camera
+  mode: live
+  bag_path: ""
+  bag_clock: true
+
+# 多雷达外参：推荐 pixmoving 的 NDT/ICP 标定包（两路 PointCloud2 → 外参）
+# 仓库：https://github.com/pixmoving-moveit/multi_lidar_calibration_ros2
+lidar:
+  calibration_package: multi_lidar_calibration
+  calibration_launch: multi_lidar_calibration_ndt.launch.xml
+  launch_args: "input/source_pointcloud:=/rslidar_points_4 input/target_pointcloud:=/iv_points_10"
+
+merge:
+  input_topics:
+    - /lidar_1/points
+    - /lidar_2/points
+  output_topic: /merged_points
+  target_frame: base_link
+  rate_hz: 10.0
+
+# 相机+点云：推荐 LCAS 的 Humble 融合包（易 colcon；话题在包内 config/config.yaml 配置）
+# 仓库：https://github.com/LCAS/camera_lidar_humble
+# 将 lidar_sub_topic 改为 /merged_points 即可对接「拼接点云」。
+# 更严格的靶标/无靶标外参标定可选用：https://github.com/koide3/direct_visual_lidar_calibration（见 README）
+fusion:
+  image_topic: /camera/image_raw
+  points_topic: /merged_points
+  mode: live
+  bag_path: ""
+  calibration_package: camera_lidar_fusion
+  calibration_launch: launch.py
+  launch_args: ""
+
+output:
+  calibration_dir: ./calibration_results

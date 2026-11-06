@@ -1,0 +1,44 @@
+ros:
+  version: ros2
+  setup_scripts:
+  - /opt/ros/humble/setup.bash
+  - /mnt/d/smart-agriculture-tool/课程作业/课程作业/project/ros2_ws/install/setup.bash
+  shell_prefix: wsl -d Ubuntu -- bash -lc
+camera:
+  squares_x: 7
+  squares_y: 5
+  square_size_m: 0.025
+  image_topic: /s_gmsl_6/image_raw
+  camera_ns: /s_gmsl_6
+  mode: bag
+  bag_path: data/标定数据
+  bag_clock: true
+  compressed_bridge: true
+  compressed_topic: /s_gmsl_6/image_raw/compressed
+lidar:
+  calibration_package: multi_lidar_calibration
+  calibration_launch: multi_lidar_calibration_ndt.launch.xml
+  launch_args: input/source_pointcloud:=/rslidar_points_1 input/target_pointcloud:=/rslidar_points_2
+merge:
+  input_topics:
+  - /rslidar_points_1
+  - /rslidar_points_2
+  - /rslidar_points_3
+  - /rslidar_points_4
+  - /iv_points_10
+  - /iv_points_11
+  - /livox/lidar_172_168_1_200
+  - /livox/lidar_172_168_1_201
+  output_topic: /merged_points
+  target_frame: base_link
+  rate_hz: 10.0
+fusion:
+  image_topic: /s_gmsl_5/image_raw
+  points_topic: /merged_points
+  mode: bag
+  bag_path: ''
+  calibration_package: camera_lidar_fusion
+  calibration_launch: launch.py
+  launch_args: ''
+output:
+  calibration_dir: ./calibration_results
