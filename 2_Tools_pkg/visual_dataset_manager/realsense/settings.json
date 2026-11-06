@@ -1,0 +1,19 @@
+{
+  "last_task": "demo2",
+  "classes": [
+    "object",
+    "person",
+    "car",
+    "bottle",
+    "chair",
+    "bottle2"
+  ],
+  "export_format": "yolo",
+  "train_ratio": 0.8,
+  "save_depth": true,
+  "burst_interval": 2,
+  "timer_interval_ms": 33,
+  "window_w": 1280,
+  "window_h": 800,
+  "window_maximized": true
+}

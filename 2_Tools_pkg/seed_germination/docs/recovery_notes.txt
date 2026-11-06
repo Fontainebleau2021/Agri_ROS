@@ -1,0 +1,27 @@
+恢复包版本：2026-10-27
+来源：本对话此前的服务器 / Atlas 运行记录及上一个 GUI 压缩包。不是作者原 repo 的源文件原样拷贝。
+
+服务器目录：/lustre/home/acct-stu/stu702/SeedGerm-VIG
+- 将 server/ 所有文件复制到这个目录
+- 已经存在的 _models_rice_barley/ 和 example_G7/ 不要删除
+- CPU 已知路线：conda activate seedgerm_detect; python batch_yolo_rice_cpu.py --device cpu
+- CUDA 有 GPU 才用：python batch_yolo_rice_cpu.py --device 0
+- U-Net：conda activate seedgerm_segment_tf22; python batch_unet_rice_full.py
+
+Atlas 板子目录：/root/seedgerm_atlas
+- 将 atlas/ 所有文件复制到这个目录
+- 已经存在的 models_om/ 三个 U-Net 文件不能被恢复包替代
+- 启动完整分析：source /usr/local/Ascend/ascend-toolkit/set_env.sh
+  python3 run_seedgerm_unet_cv_pipeline.py --input_dir input_images --output_dir output_pipeline
+- 启动 GUI：bash start_gui.sh
+
+最终 GUI 所需的三个模型文件：
+models_om/unet_rice_overall_bs1_512.om
+models_om/unet_rice_seed_bs1_512.om
+models_om/unet_rice_seedling_bs1_512.om
+
+已经重建：服务器 YOLO / U-Net 推理、ROI、表型、追踪、ONNX 转换；
+Atlas U-Net OM 推理、YOLO 数值排查、GUI、CSV、JSON、趋势图。
+没法重建为真实数据：原来的模型权重、OM 字节文件、原始论文标注集，以及逐次运行产生的 CSV/PNG/日志。
+
+⚠ 活力分数为经验公式演示输出，不是经过实验校准的种子活力分级。
