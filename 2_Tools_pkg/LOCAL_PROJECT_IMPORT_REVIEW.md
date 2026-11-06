@@ -4,11 +4,11 @@
 
 |项目|目录|现状|
 |---|---|---|
-|多传感器标定|3_Calibration_pkg/sensor_calibration|Qt图标接入，ROS1/2包装器，需目标环境验证|
+|多传感器标定|2_Tools_pkg/sensor_calibration|Qt图标接入，ROS1/2包装器，需目标环境验证|
 |可视化平台|2_Tools_pkg/visual_data_platform|恢复Electron/Vue源码，窗口/About/网页图标已接；完整构建阻塞|
 |视觉数据集管理|2_Tools_pkg/visual_dataset_manager|保留RealSense与Azure Kinect两个不同实现，不当重复删掉；Qt图标接入|
-|种子萌发|9_AI_Perception_and_Models_pkg/seed_germination|使用此前解压恢复包；其README明确部分源码为恢复重建，不能冒充逐字原始项目；网页favicon接入|
-|番茄识别|9_AI_Perception_and_Models_pkg/tomato_ripeness|只有品牌占位，缺源码，EXE内图标尚未替换|
+|种子萌发|2_Tools_pkg/seed_germination|使用此前解压恢复包；其README明确部分源码为恢复重建，不能冒充逐字原始项目；网页favicon接入|
+|番茄识别|2_Tools_pkg/tomato_ripeness|只有品牌占位，缺源码，EXE内图标尚未替换|
 
 已排除node_modules/运行解释器、构建输出、缓存、视频、模型权重、大数据及原始压缩包；这些仍在原盘，未破坏原资料。26个“(1)”副本逐字SHA256相同才去重。可视化目录中混入的标定项目整体不重复导入。
 
